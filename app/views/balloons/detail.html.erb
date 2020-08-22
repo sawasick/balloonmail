@@ -1,0 +1,17 @@
+<h1>Balloons#detail#<%= @b.id%></h1>
+
+
+
+<td><%= @b.id %></td>
+<td><%= @b.user_id %></td>
+<td><%= @b.title %></td>
+<td><%= @b.content %></td>
+<td><%= @b.date %></td>
+<td><%= @b.paperType %></td>
+<br>
+
+<% if current_user.already_bookmarked?(@b) %>
+  <%= button_to "ブックマーク済み", bookmark_path(@b), { method: :delete, params: {id: @b.id} } %>
+<% else %>
+  <%= button_to 'ブックマークする', bookmarks_path(@b),{params:{id: @b.id}} %>
+<% end %>

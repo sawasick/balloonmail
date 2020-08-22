@@ -1,0 +1,15 @@
+current directory: /Users/sawasickimac/Desktop/balloonmail/vendor/bundler/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+/Users/sawasickimac/.rbenv/versions/2.7.1/bin/ruby -I /Users/sawasickimac/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20200822-74520-1hofky6.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sawasickimac/Desktop/balloonmail/vendor/bundler/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/sawasickimac/Desktop/balloonmail/vendor/bundler/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/sawasickimac/Desktop/balloonmail/vendor/bundler/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20200822-74520-dbwiek/bootsnap

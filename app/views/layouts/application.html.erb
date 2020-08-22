@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Balloonmail</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <!-- メディアクエリ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes"></head>
+    <link rel="apple-touch-icon" href="<%=image_path("icon.png")%>" />
+  </head>
+
+  <body>
+    <%= yield %>
+    <nav>
+        <% if !user_signed_in? %>
+        <div class="login-nav">
+            <div class="btn">
+                <%= link_to 'ログイン', new_user_session_path, class: 'btnText' %>
+            </div>
+            <div class='btn'>
+                <%= link_to '新規登録', new_user_registration_path, class: 'btnText' %>
+            </div>
+        </div>
+        <% end %>
+    </nav>
+  </body>
+  <footer>
+    <% if user_signed_in? %>
+        <div class="global-nav">
+            <%= link_to image_tag('nav/nav_new.svg', class: "global-nav-img top"), balloons_path %>
+            <%= link_to image_tag('nav/nav_show.svg', class: "global-nav-img show"), balloons_show_path %>
+            <%= link_to image_tag('nav/nav_bookmark.svg', class: "global-nav-img bookmark"), bookmarks_path %>
+            <%= link_to image_tag('nav/nav_setting.svg', class: "global-nav-img setting"), destroy_user_session_path, class: 'logout', method: :delete %>
+        </div>
+        <div class="global-nav-choiced">
+            <%= link_to image_tag('nav/nav_new_choice.svg', class: "global-nav-img choice top-choiced"), balloons_path %>
+            <%= link_to image_tag('nav/nav_show_choice.svg', class: "global-nav-img choice show-choiced"), balloons_show_path %>
+            <%= link_to image_tag('nav/nav_bookmark_choice.svg', class: "global-nav-img choice bookmark-choiced"), bookmarks_path %>
+            <%= link_to image_tag('nav/nav_setting_choice.svg', class: "global-nav-img choice setting-choiced"), destroy_user_session_path, class: 'logout', method: :delete %>
+        </div>
+    <%end%>
+  </footer>
+</html>

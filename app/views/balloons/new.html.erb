@@ -1,0 +1,35 @@
+<%# scss読み込み %>
+<%= stylesheet_link_tag "balloons/new", :media => "all" %>
+
+
+<% if @balloon.errors.any? %>
+  <ul>
+    <% @balloon.errors.full_messages.each do |err| %>
+      <li><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @balloon, local: true do |form| %>
+    <div class="body-wrap">
+        <div class="body-wrap-sub">
+            <div class="paper-img-wrap">
+                <%= image_tag "paper/paper"+@balloon.paperType.to_s+".svg", alt: "paper", class: "paper-img" %>
+            </div>
+            <div class="form-wrap">
+                <div class="form form-title">
+                    <%# <label for="title", class="title">タイトル</label> %>
+                    <%= form.text_field :title,{class:"paper-title"} %>
+                </div>
+                <div class="form form-content">
+                    <%# <label for="content", class="title">内容</label> %>
+                    <%= form.text_area :content,{class:"paper-content"} %>
+                </div>
+                <%= form.submit "バルーンにくくりつける", class: "form" %>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
+

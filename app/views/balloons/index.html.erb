@@ -1,0 +1,52 @@
+<%# scss読み込み %>
+<%= stylesheet_link_tag "balloons/index", :media => "all" %>
+
+<%# <h1 class="balloon-index">Balloons#index</h1>s %>
+
+<% if user_signed_in? %>
+<div class="body-wrap">
+    <p>用紙を選択</p>
+    <div class="paper-wrap">
+        <div class="paper-wrap-sub">
+            <div class="paper">
+                <div class="paper-sub">
+                    <%= image_tag "paper/paper1.svg", alt: "paper1", class: "paper-img" %>
+                    <%= button_to "", {controller: 'balloons', action: 'new'}, {class: "paper-btn", params: {paperType: 1}} %>
+                </div>
+            </div>
+            <div class="paper">
+                <div class="paper-sub">
+                    <%= image_tag "paper/paper2.svg", alt: "paper2", class: "paper-img" %>
+                    <%= button_to "", {controller: 'balloons', action: 'new'}, {class: "paper-btn", params: {paperType: 2}} %>
+                </div>
+            </div>
+            <div class="paper">
+                <div class="paper-sub">
+                    <%= image_tag "paper/paper3.svg", alt: "paper3", class: "paper-img" %>
+                    <%= button_to "", {controller: 'balloons', action: 'new'}, {class: "paper-btn", params: {paperType: 3}} %>
+                </div>
+            </div>
+            <div class="paper">
+                <div class="paper-sub">
+                    <%= image_tag "paper/paper4.svg", alt: "paper4", class: "paper-img" %>
+                    <%= button_to "", {controller: 'balloons', action: 'new'}, {class: "paper-btn", params: {paperType: 4}} %>
+                </div>
+            </div>
+            <div class="paper">
+                <div class="paper-sub">
+                    <%= image_tag "paper/paper5.svg", alt: "paper5", class: "paper-img" %>
+                    <%= button_to "", {controller: 'balloons', action: 'new'}, {class: "paper-btn", params: {paperType: 5}} %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% else %>
+<div class="logomark-img-wrap">
+    <%= image_tag "logo/logomark.png", alt: "logomark" %>
+</div>
+<div class="logotype-img-wrap">
+    <%= image_tag "logo/logotype.png", alt: "logotype" %>
+</div>
+<% end %>
+

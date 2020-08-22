@@ -1,0 +1,124 @@
+$bg-blue: #50b4ff;
+$bg-white: #f0f0f0;
+$color-main: #ffa73f;
+$color-accent: #7095ff;
+$paper-width-tmb: 35vw;
+$paper-height-tmb: $paper-width-tmb * 1.41;
+$root-fontSize: 24px;
+// 紙の画像の行間が40px,基準文字サイズを24px
+$paper-textSize: calc(24 * 100vw / 750);
+$paper-lineHeight: calc(40 * 100vw / 750);
+$paper-textHeight-title: calc(40 * 100vw / 750);
+$paper-textHeight-content: calc(40 * 100vw / 750 * 17);
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+    Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+    sans-serif;
+  margin: 0 auto;
+  width: 100vw;
+  font-size: 24px;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient($bg-blue, 45%, $bg-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//body
+.body-wrap {
+  height: 75vh;
+  padding-top: 10vh;
+}
+
+//グローバルナビ
+.global-nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 15vh;
+  top: 85vh;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.global-nav-choiced {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 15vh;
+  top: 85vh;
+  background-color: rgba(255, 255, 255, 0);
+}
+.global-nav-img {
+  display: inline-block;
+  width: 18vw;
+  height: 100%;
+  margin: 0 auto;
+}
+.choice {
+  visibility: hidden;
+}
+
+//ボタンレイアウト
+.btn {
+  width: 80%;
+  height: 10vh;
+  background-color: #ffffff;
+  margin: 0 auto 5% auto;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: none;
+}
+.btnText {
+  display: block;
+  position: relative;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  line-height: 10vh;
+  padding: 0;
+}
+
+//フォーム入力欄レイアウト
+.field {
+  margin-top: 8%;
+}
+.form {
+  display: block;
+  width: 80%;
+  height: 7vh;
+  background-color: #ffffff;
+  margin: 0 auto 0 auto;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+}
+.formText {
+  font-size: 24px;
+}
+.formLabel {
+  display: inline-block;
+  width: 100%;
+  color: #000000;
+  margin-left: 10vw;
+}
+.formRemember {
+  margin-top: 0;
+  margin-bottom: 10%;
+}
+
+// リンク
+.link {
+  width: auto;
+  color: $color-accent;
+  text-decoration: none;
+}

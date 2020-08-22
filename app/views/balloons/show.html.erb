@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag "balloons/show", :media => "all" %>
+
+<h1 class="balloon-show">Balloons#show</h1>
+<p>Find me in app/views/balloons/show.html.erb</p>
+
+<% @b.each do |bb| %>
+<td><%= bb.id %></td>
+<td><%= bb.user_id %></td>
+<td><%= bb.title %></td>
+<td><%= bb.content %></td>
+<td><%= strip_tags(bb.content).truncate(10) %>
+<td><%= bb.date %></td>
+<td><%= bb.paperType %></td>
+<%= link_to '詳細', "/balloons/show/#{bb.id}", method: :get %>
+<br>
+<% end %>
+
+<%= button_to "リロード", {controller: 'balloons', action: 'show'}, {method: :get, class: "btn"} %>
+

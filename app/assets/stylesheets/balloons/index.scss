@@ -1,0 +1,83 @@
+@import "common";
+
+.logomark-img-wrap {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 8%;
+}
+.logomark-img-wrap img {
+  width: 100%;
+}
+.logotype-img-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+.logotype-img-wrap img {
+  width: 100%;
+}
+.login-nav {
+  margin-top: 10%;
+}
+.top {
+  visibility: hidden;
+}
+.top-choiced {
+  visibility: visible;
+  display: inline-block;
+}
+p {
+  font-size: 24px;
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+.paper-wrap {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.paper-wrap-sub {
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0 auto;
+}
+.paper {
+  width: $paper-width-tmb;
+  height: $paper-height-tmb;
+  margin: 2vw 0;
+}
+.paper-sub {
+  position: relative;
+}
+.paper-btn {
+  position: absolute;
+  width: $paper-width-tmb;
+  height: $paper-height-tmb;
+  top: 0;
+  left: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.paper-img {
+  position: absolute;
+  width: $paper-width-tmb;
+  height: $paper-height-tmb;
+  top: 0;
+  left: 0;
+}
+
+//メディアクエリ
+//tablet
+@media screen and (min-width: 481px) and (max-width: 960px) {
+}
+
+//pc
+@media screen and (min-width: 961px) {
+}
