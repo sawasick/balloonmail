@@ -4,12 +4,13 @@ $color-main: #ffa73f;
 $color-accent: #7095ff;
 $paper-width-tmb: 35vw;
 $paper-height-tmb: $paper-width-tmb * 1.41;
-$root-fontSize: 24px;
+// $root-fontSize: 24px;
 // 紙の画像の行間が40px,基準文字サイズを24px
-$paper-textSize: calc(24 * 100vw / 750);
-$paper-lineHeight: calc(40 * 100vw / 750);
-$paper-textHeight-title: calc(40 * 100vw / 750);
-$paper-textHeight-content: calc(40 * 100vw / 750 * 17);
+// 紙の画像の行間が52px,基準文字サイズを32px
+$paper-textSize: calc(32 * 100vw / 750);
+$paper-lineHeight: calc(52 * 100vw / 750);
+$paper-textHeight-title: calc(52 * 100vw / 750);
+$paper-textHeight-content: calc(52 * 100vw / 750 * 12);
 
 html,
 body {
@@ -18,7 +19,8 @@ body {
     sans-serif;
   margin: 0 auto;
   width: 100vw;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 body {
@@ -32,7 +34,8 @@ body {
 
 //body
 .body-wrap {
-  height: 75vh;
+  width: 100vw;
+  height: 80vh;
   padding-top: 10vh;
 }
 
@@ -44,7 +47,9 @@ body {
   width: 100vw;
   height: 15vh;
   top: 85vh;
-  background-color: rgba(255, 255, 255, 0.4);
+  // background-color: rgba(255, 255, 255, 0.4);
+  background-color: #F0F0F0;;
+  z-index: 100;
 }
 .global-nav-choiced {
   position: fixed;
@@ -54,6 +59,7 @@ body {
   height: 15vh;
   top: 85vh;
   background-color: rgba(255, 255, 255, 0);
+  z-index: 101;
 }
 .global-nav-img {
   display: inline-block;
@@ -68,7 +74,7 @@ body {
 //ボタンレイアウト
 .btn {
   width: 80%;
-  height: 10vh;
+  height: 7vh;
   background-color: #ffffff;
   margin: 0 auto 5% auto;
   box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.3);
@@ -78,13 +84,13 @@ body {
 .btnText {
   display: block;
   position: relative;
-  height: 100%;
-  font-size: 18px;
+  // height: 100%;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
   color: #000000;
-  line-height: 10vh;
+  line-height: 7vh;
   padding: 0;
 }
 
@@ -109,7 +115,7 @@ body {
   display: inline-block;
   width: 100%;
   color: #000000;
-  margin-left: 10vw;
+  padding-left: 10vw;
 }
 .formRemember {
   margin-top: 0;

@@ -33,7 +33,7 @@ p {
 }
 .paper-wrap {
   width: 100vw;
-  height: 100%;
+  height: calc(100% - 36px);
   background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
