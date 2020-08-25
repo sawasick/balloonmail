@@ -25,7 +25,8 @@ body {
 
 body {
   // height: 100%;
-  background: linear-gradient($bg-blue, 45%, $bg-white);
+  // background: linear-gradient($bg-blue, 45%, $bg-white);
+  background: linear-gradient(red,yellow);
 }
 
 * {
@@ -37,6 +38,7 @@ body {
   width: 100vw;
   height: 80vh;
   padding-top: 10%;
+  background: rgba(0,0,255,.4);
 }
 
 //グローバルナビ
