@@ -10,7 +10,7 @@
   </ul>
 <% end %>
 
-<%= form_with model: @balloon, local: true do |form| %>
+<%= form_with model: @balloon, class: 'form-with', local: true do |form| %>
     <div class="body-wrap">
         <%= form.submit "バルーンにくくりつける", class: "btn btnText" %>
         <div class="body-wrap-sub">
