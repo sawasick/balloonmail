@@ -32,7 +32,7 @@ $(function(){
 
 // body読み込み時に一度だけbodyサイズを設定
 window.onload = ()=>{
-  document.body.style.minHeight = window.innerHeight + 'px';
+  document.body.style.height = window.innerHeight + 'px';
 }
 
 // リサイズを停止して500ms後にbodyサイズを設定
@@ -41,6 +41,6 @@ window.addEventListener("resize", () => {
   clearTimeout(timeoutId);
 
   timeoutId = setTimeout(() => {
-      document.body.style.minHeight = window.innerHeight + 'px';
+      document.body.style.height = window.innerHeight + 'px';
   }, 500);
 });
