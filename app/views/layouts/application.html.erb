@@ -54,15 +54,15 @@
         }
 
         // リサイズを停止して500ms後にbodyサイズを設定
-        let timeoutId;
-        window.addEventListener("resize", () => {
-            clearTimeout(timeoutId);
+        // let timeoutId;
+        // window.addEventListener("resize", () => {
+        //     clearTimeout(timeoutId);
 
-            timeoutId = setTimeout(() => {
-                document.body.style.minHeight = window.innerHeight + 'px';
-                document.body.style.height = window.innerHeight + 'px';
-            }, 500);
-        });
+        //     timeoutId = setTimeout(() => {
+        //         document.body.style.minHeight = window.innerHeight + 'px';
+        //         document.body.style.height = window.innerHeight + 'px';
+        //     }, 500);
+        // });
     </script>
   </body>
 </html>
