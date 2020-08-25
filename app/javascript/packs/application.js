@@ -28,3 +28,19 @@ $(function(){
       return false;
     });
 });
+
+
+// body読み込み時に一度だけbodyサイズを設定
+window.onload = ()=>{
+  document.body.style.minHeight = window.innerHeight + 'px';
+}
+
+// リサイズを停止して500ms後にbodyサイズを設定
+let timeoutId;
+window.addEventListener("resize", () => {
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(() => {
+      document.body.style.minHeight = window.innerHeight + 'px';
+  }, 500);
+});
