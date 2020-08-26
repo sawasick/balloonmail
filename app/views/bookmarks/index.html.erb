@@ -1,15 +1,17 @@
 <%= stylesheet_link_tag "bookmarks/index", :media => "all" %>
 
-<h1>Bookmark</h1>
-<h3>ブックマークしているバルーン</h3>
-<% @bm.each do |b| %>
-<td><%= b.id %></td>
-<td><%= b.user_id %></td>
-<td><%= b.title %></td>
-<td><%= b.content %></td>
-<td><%= strip_tags(b.content).truncate(3) %>
-<td><%= b.date %></td>
-<td><%= b.paperType %></td>
-<%= link_to '詳細', "/balloons/show/#{b.id}", method: :get %>
-<br>
-<% end %>
+<div class="body-wrap">
+    <% @bm.each do |b| %>
+        <%= link_to "/balloons/show/#{b.id}", method: :get do %>
+            <div class="balloon-wrap">
+                <%= image_tag"paper/paper_show"+b.paperType.to_s+".svg", alt: "paper" %>
+                <ul>
+                    <li class="title"><%= b.title %></li>
+                    <li class="content"><%= strip_tags(b.content).truncate(32) %>
+                </ul>
+            </div>
+        <% end %>
+    <br>
+    <% end %>
+</div>
+
