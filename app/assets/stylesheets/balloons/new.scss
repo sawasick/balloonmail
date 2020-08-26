@@ -3,12 +3,12 @@
 .top {
   visibility: hidden;
 }
-.form{
-  margin-bottom: 3vh;
-}
 .top-choiced {
   visibility: visible;
   display: inline-block;
+}
+.form{
+  margin-bottom: 3vh;
 }
 .btn{
   margin-bottom: 3%;
@@ -43,7 +43,7 @@
 }
 .form-title {
   width: 100%;
-  height: $paper-textHeight-title;
+  height: $paper-textHeight;
   background-color: transparent;
   margin: 0;
   margin-top: $paper-lineHeight;
