@@ -12,7 +12,7 @@
 
 <%= form_with model: @balloon, class: 'form-with', local: true do |form| %>
     <div class="body-wrap">
-        <%= form.submit "バルーンにくくりつける", class: "btn btnText" %>
+        <%= form.submit "バルーンを飛ばす", class: "btn btnText" %>
         <div class="body-wrap-sub">
             <div class="paper-img-wrap">
                 <%= image_tag "paper/paper"+@balloon.paperType.to_s+".svg", alt: "paper", class: "paper-img" %>
