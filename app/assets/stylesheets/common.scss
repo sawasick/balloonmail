@@ -23,8 +23,8 @@ body {
 
 body {
   // height: 100%;
-  // background: linear-gradient($bg-blue, 45%, $bg-white);
-  background: linear-gradient(red,yellow);
+  background: linear-gradient($bg-blue, 45%, $bg-white);
+  // background: linear-gradient(red,yellow);
 }
 
 * {
@@ -47,8 +47,8 @@ body {
   width: 100vw;
   height: 10%;
   top: 90%;
-  background-color: rgba(255, 255, 255, 0.4);
-  // background-color: #F0F0F0;
+  // background-color: rgba(255, 255, 255, 0.4);
+  background-color: #F0F0F0;
   z-index: 100;
 }
 .global-nav-choiced {
@@ -58,7 +58,7 @@ body {
   width: 100vw;
   height: 10%;
   top: 90%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
   z-index: 101;
 }
 .global-nav-img {
