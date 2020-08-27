@@ -19,10 +19,10 @@
             </div>
             <div class="form-wrap">
                 <div class="form form-title">
-                    <%= form.text_field :title,{class:"paper", placeholder:"タイトル(50字以内)"} %>
+                    <%= form.text_field :title,{class:"paper", placeholder:"タイトル(50字以内)", autocomplete: 'off'} %>
                 </div>
                 <div class="form form-content">
-                    <%= form.text_area :content,{class:"paper", placeholder:"本文"} %>
+                    <%= form.text_area :content,{class:"paper", placeholder:"本文", autocomplete: 'off'} %>
                 </div>
             </div>
         </div>

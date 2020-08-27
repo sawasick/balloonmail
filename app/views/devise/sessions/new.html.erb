@@ -6,12 +6,12 @@
     <div class="form-login">
         <div class="field">
             <%= f.label :username, class: "formLabel" %><br />
-            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form formText" %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form formText", autocomplete: 'off' %>
         </div>
 
         <div class="field">
             <%= f.label :password, class: "formLabel" %><br />
-            <%= f.password_field :password, autocomplete: "current-password", class: "form formText" %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "form formText", autocomplete: 'off' %>
         </div>
 
         <% if devise_mapping.rememberable? %>
