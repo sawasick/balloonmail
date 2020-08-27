@@ -3,17 +3,20 @@
 .form-with{
   height: 90%;
 }
+.btn{
+    margin-bottom: 3%;
+    top: 2%;
+}
 .body-wrap{
-    position: relative;
-    height: 85%;
-    top: 5%;
+    height: 100%;
 }
 .body-wrap-sub {
-  position: relative;
-  width: 80%;
-  height: calc(100% - 5vh);
-  overflow: scroll;
-  margin: 0 auto;
+    position: relative;
+    width: 80%;
+    height: 90%;
+    overflow: scroll;
+    margin: 0 auto;
+    top: 2%;
 }
 .paper-img-wrap {
   position: absolute;
