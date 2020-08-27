@@ -127,3 +127,15 @@ body {
   color: $color-accent;
   text-decoration: none;
 }
+
+//エラーメッセージ
+.error-message{
+  position: relative;
+  list-style: none;
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+.em-login{
+  position: absolute;
+}

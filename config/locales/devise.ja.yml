@@ -4,7 +4,7 @@ ja:
       models:
         user:
           attributes:
-            email:
+            username:
               taken: "は既に使用されています。"
               blank: "が入力されていません。"
               too_short: "は%{count}文字以上に設定して下さい。"
@@ -25,6 +25,7 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "次回から自動的にログイン"
+        username: "ユーザーネーム"
     models:
       user: "ユーザ"
   devise:
