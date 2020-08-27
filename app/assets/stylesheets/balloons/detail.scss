@@ -1,29 +1,14 @@
 @import "common";
 
-.top {
-  visibility: hidden;
-}
-.top-choiced {
-  visibility: visible;
-  display: inline-block;
-}
-.btn{
-  margin-bottom: 3%;
-  top: 2%;
-}
 .form-with{
   height: 90%;
-}
-.body-wrap{
-  height: 100%;
 }
 .body-wrap-sub {
   position: relative;
   width: 80%;
-  height: 90%;
+  height: calc(100% - 5vh);
   overflow: scroll;
   margin: 0 auto;
-  top: 2%;
 }
 .paper-img-wrap {
   position: absolute;
@@ -40,7 +25,7 @@
 }
 .form-title {
   width: 100%;
-  height: $paper-lineHeight;
+  height: $paper-textHeight-title;
   background-color: transparent;
   margin: 0;
   margin-top: $paper-lineHeight;
@@ -61,4 +46,5 @@
   line-height: $paper-lineHeight;
   padding: 0;
   border: 0;
+  overflow: scroll;
 }

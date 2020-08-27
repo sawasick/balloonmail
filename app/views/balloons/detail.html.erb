@@ -1,17 +1,24 @@
-<h1>Balloons#detail#<%= @b.id%></h1>
+<%# scss読み込み %>
+<%= stylesheet_link_tag "balloons/detail", :media => "all" %>
 
 
-
-<td><%= @b.id %></td>
-<td><%= @b.user_id %></td>
-<td><%= @b.title %></td>
-<td><%= @b.content %></td>
-<td><%= @b.date %></td>
-<td><%= @b.paperType %></td>
-<br>
-
-<% if current_user.already_bookmarked?(@b) %>
-  <%= button_to "ブックマーク済み", bookmark_path(@b), { method: :delete, params: {id: @b.id} } %>
-<% else %>
-  <%= button_to 'ブックマークする', bookmarks_path(@b),{params:{id: @b.id}} %>
-<% end %>
+<div class="body-wrap">
+  <% if current_user.already_bookmarked?(@b) %>
+    <%= button_to "ブックマークから削除", bookmark_path(@b), {class: "btn btnText", method: :delete, params: {id: @b.id} } %>
+  <% else %>
+    <%= button_to 'ブックマークする', bookmarks_path(@b),{class: "btn btnText", params:{id: @b.id}} %>
+  <% end %>
+    <div class="body-wrap-sub">
+        <div class="paper-img-wrap">
+            <%= image_tag "paper/paper"+@b.paperType.to_s+".svg", alt: "paper", class: "paper-img" %>
+        </div>
+        <div class="form-wrap">
+            <div class="form form-title">
+              <p class="paper"><%= @b.title %></p>
+            </div>
+            <div class="form form-content">
+              <p class="paper"><%= @b.content %></p>
+            </div>
+        </div>
+    </div>
+</div>
