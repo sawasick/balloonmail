@@ -16,7 +16,7 @@ class BookmarksController < ApplicationController
     def destroy
       @bm = Bookmark.find_by(balloon_id: params[:id], user_id: current_user.id)
       @bm.destroy
-      redirect_to controller: 'balloons', action: 'show'
+      redirect_to controller: 'bookmarks', action: 'index'
     end
   end
   
