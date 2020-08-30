@@ -24,6 +24,8 @@ class BalloonsController < ApplicationController
 
   def detail
     @b = Balloon.find(params[:id])
+    @u = User.find(@b.user_id).username
+    @d = @b.date.strftime("%Y年%m月%d日 %H:%M")
     @bm = Bookmark.new
   end
 
