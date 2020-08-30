@@ -1,0 +1,19 @@
+@import "common";
+
+.show{
+    visibility: visible;
+}
+.setting {
+    visibility: hidden;
+}
+.setting-choiced {
+    visibility: visible;
+    display: inline-block;
+}
+
+p{
+    margin: 0;
+}
+.logout{
+    color: #FF0000;
+}

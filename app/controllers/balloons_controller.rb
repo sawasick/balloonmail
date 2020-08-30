@@ -16,6 +16,12 @@ class BalloonsController < ApplicationController
     @b = Balloon.find(bchoice)
   end
 
+  def show_mine
+    @b = Balloon.where(user_id: current_user.id)
+    @show_mine = true
+    render "show"
+  end
+
   def detail
     @b = Balloon.find(params[:id])
     @bm = Bookmark.new
@@ -67,6 +73,9 @@ class BalloonsController < ApplicationController
           @bb.destroy
         end
     end
+  end
+
+  def setting
   end
 
   def balloon_params

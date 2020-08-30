@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "balloons/show", :to => "balloons#show"
   get "balloons/detail", :to => "balloons#detail"
   get 'balloons/show/:id' => 'balloons#detail'
+  get 'balloons/show_mine'
+  get "balloons/setting" => "balloons#setting"
   resources :balloons
   resources :bookmarks, only: [:index, :create, :destroy]
   post 'balloons/new'

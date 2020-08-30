@@ -36,13 +36,13 @@
             <%= link_to image_tag('nav/nav_new.svg', class: "global-nav-img top"), balloons_path %>
             <%= link_to image_tag('nav/nav_show.svg', class: "global-nav-img show"), balloons_show_path %>
             <%= link_to image_tag('nav/nav_bookmark.svg', class: "global-nav-img bookmark"), bookmarks_path %>
-            <%= link_to image_tag('nav/nav_setting.svg', class: "global-nav-img setting"), destroy_user_session_path, class: 'logout', method: :delete %>
+            <%= link_to image_tag('nav/nav_setting.svg', class: "global-nav-img setting"), balloons_setting_path %>
         </div>
         <div class="global-nav-choiced">
             <%= link_to image_tag('nav/nav_new_choice.svg', class: "global-nav-img choice top-choiced"), balloons_path %>
             <%= link_to image_tag('nav/nav_show_choice.svg', class: "global-nav-img choice show-choiced"), balloons_show_path %>
             <%= link_to image_tag('nav/nav_bookmark_choice.svg', class: "global-nav-img choice bookmark-choiced"), bookmarks_path %>
-            <%= link_to image_tag('nav/nav_setting_choice.svg', class: "global-nav-img choice setting-choiced"), destroy_user_session_path, class: 'logout', method: :delete %>
+            <%= link_to image_tag('nav/nav_setting_choice.svg', class: "global-nav-img choice setting-choiced"), balloons_setting_path %>
         </div>
     <%end%>
   </footer>

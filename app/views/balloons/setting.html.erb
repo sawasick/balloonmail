@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag "balloons/setting", :media => "all" %>
+
+<div class="body-wrap">
+    <p><%= current_user.username%>さん</p>
+    <%= button_to "自分の投稿を見る", {controller: 'balloons', action: 'show_mine'}, {method: :get, class: "btn btnText"} %>
+    <%= button_to "ログアウト", destroy_user_session_path, {method: :delete, class: "btn btnText logout"} %>
+</div>
+

@@ -1,4 +1,7 @@
 <%= stylesheet_link_tag "balloons/show", :media => "all" %>
+<% if @show_mine %>
+    <%= stylesheet_link_tag "balloons/setting", :media => "all" %>
+<% end %>
 
 <div class="body-wrap">
     <% @b.each do |bb| %>
@@ -14,6 +17,8 @@
     <br>
     <% end %>
 
-    <%= button_to "他のバルーンを探す", {controller: 'balloons', action: 'show'}, {method: :get, class: "btn btnText"} %>
+    
+    <% if !@show_mine %>
+        <%= button_to "リロード", {controller: 'balloons', action: 'show'}, {method: :get, class: "btn"} %>
+    <% end %>
 </div>
-
