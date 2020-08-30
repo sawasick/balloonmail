@@ -46,6 +46,21 @@
   margin: 0;
   margin-top: $paper-lineHeight;
 }
+.form-info {
+  width: 100%;
+  height: $paper-textHeight-title;
+  background-color: transparent;
+  margin: 0;
+}
+.form-info p{
+  font-size: calc(#{$paper-textSize} - 3px);
+  margin: 0;
+}
+.signature{
+  position: relative;
+  text-align: right;
+  top: calc(-1 * #{$paper-lineHeight});
+}
 .paper{
   display: block;
   width: 100%;
