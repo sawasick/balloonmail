@@ -4,9 +4,9 @@
 
 <div class="body-wrap">
   <% if current_user.already_bookmarked?(@b) %>
-    <%= button_to "ブックマークから削除", bookmark_path(@b), {class: "btn btnText", method: :delete, params: {id: @b.id} } %>
+    <%= button_to "保存済みから削除", bookmark_path(@b), {class: "btn btnText", method: :delete, params: {id: @b.id} } %>
   <% else %>
-    <%= button_to 'ブックマークする', bookmarks_path(@b),{class: "btn btnText", params:{id: @b.id}} %>
+    <%= button_to '保存する', bookmarks_path(@b),{class: "btn btnText", params:{id: @b.id}} %>
   <% end %>
     <div class="body-wrap-sub">
         <div class="paper-img-wrap">
