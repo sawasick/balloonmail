@@ -80,6 +80,37 @@ p {
 @media screen and (min-width: 481px) and (max-width: 960px) {
 }
 
-//pc
-@media screen and (min-width: 961px) {
+//pc & tab横向き
+@media screen and (min-width: 961px) and (orientation: landscape) {
+  .logomark-img-wrap{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto 0 0;
+    padding: 5% 0;
+  }
+  .logomark-img-wrap img{
+    margin: 0 auto;
+  }
+  .logotype-img-wrap{
+    position: relative;
+    width: 50%;
+    height: 30%;
+    margin: 0 0 0 auto;
+    top: -90%;
+  }
+  .logotype-img-wrap img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .login-nav{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0 0 0 auto;
+    top: -90%;
+  }
+  .btn{
+    margin: 5% auto;
+  }
 }

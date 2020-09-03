@@ -17,17 +17,20 @@
   </head>
 
   <body>
+    <div class="sp-landscape">
+        <%= image_tag "other/sp_landscape.svg", alt: "sp-landscape" %>
+    </div>
     <%= yield %>
-    <nav>
+    <nav class="login-nav">
         <% if !user_signed_in? %>
-        <div class="login-nav">
+        <%# <div class="login-nav"> %>
             <div class="btn">
                 <%= link_to 'ログイン', new_user_session_path, class: 'btnText' %>
             </div>
             <div class='btn'>
                 <%= link_to '新規登録', new_user_registration_path, class: 'btnText' %>
             </div>
-        </div>
+        <%# </div> %>
         <% end %>
     </nav>
     <footer>
@@ -52,6 +55,15 @@
             document.body.style.minHeight = window.innerHeight + 'px';
             document.body.style.height = window.innerHeight + 'px';
         }
+        // リサイズを停止して500ms後にbodyサイズを設定
+        let timeoutId;
+        window.addEventListener("resize", () => {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                document.body.style.minHeight = window.innerHeight + 'px';
+            }, 500);
+        });
     </script>
   </body>
 </html>

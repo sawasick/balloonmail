@@ -139,3 +139,29 @@ body {
 .em-login{
   position: absolute;
 }
+
+//sp横向き時のアラート画像
+.sp-landscape{
+  display: none;
+}
+
+//メディアクエリ
+//sp横向き
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .sp-landscape{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .sp-landscape img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+  }
+  .body-wrap, .login-nav, footer, .logo{
+    display: none;
+  }
+}
