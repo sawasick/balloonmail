@@ -1,6 +1,9 @@
 <%= stylesheet_link_tag "bookmarks/index", :media => "all" %>
 
 <div class="body-wrap">
+    <% if @bm.size == 0 %>
+        <p class="msg"><%= @msg %></p>
+    <% end%>
     <% @bm.each do |b| %>
         <%= link_to "/balloons/show/#{b.id}", method: :get do %>
             <div class="balloon-wrap">

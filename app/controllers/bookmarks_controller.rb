@@ -2,6 +2,11 @@ class BookmarksController < ApplicationController
     before_action :authenticate_user!
     def index
       @bm = current_user.bookmarked_balloons
+      if @bm.size == 0 then
+        @msg = "保存しているバルーンはありません"
+      else
+        @msg = ""
+      end
     end
   
     def create
