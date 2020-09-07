@@ -1,14 +1,4 @@
-$bg-blue: #50b4ff;
-$bg-white: #f0f0f0;
-$color-main: #ffa73f;
-$color-accent: #7095ff;
-$paper-width-tmb: 35vw;
-$paper-height-tmb: $paper-width-tmb * 1.41;
-// $root-fontSize: 24px;
-// 紙の画像の行間が52px,基準文字サイズを32px
-$paper-textSize: calc(32 * 100vw / 750);
-$paper-lineHeight: calc(52 * 100vw / 750);
-$paper-textHeight-content: calc(52 * 100vw / 750 * 11);
+@import "variables";
 
 html,
 body {
@@ -39,7 +29,7 @@ body {
 }
 
 //グローバルナビ
-.global-nav {
+.global-nav-sp {
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -50,7 +40,7 @@ body {
   // background-color: #F0F0F0;
   z-index: 100;
 }
-.global-nav-choiced {
+.global-nav-choiced-sp {
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -60,7 +50,7 @@ body {
   background-color: transparent;
   z-index: 101;
 }
-.global-nav-img {
+.global-nav-img-sp {
   display: inline-block;
   width: 18vw;
   height: 100%;
@@ -68,6 +58,9 @@ body {
 }
 .choice {
   visibility: hidden;
+}
+.global-nav-pc, .global-nav-choiced-pc, .global-nav-img-pc {
+  display: none;
 }
 
 //ボタンレイアウト
@@ -163,6 +156,46 @@ body {
     transform : translate(-50%,-50%);
   }
   .body-wrap, .login-nav, footer, .logo{
+    display: none;
+  }
+}
+
+//pc & tab横向き
+@media screen and (min-width: 961px) and (orientation: landscape) {
+  //グローバルナビ
+  .global-nav-pc {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .global-nav-choiced-pc {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 101;
+  }
+  .global-nav-img-pc {
+    display: inline-block;
+    // max-width: 30vw;
+    // max-height: 20vh;
+    width: 100%;
+    height: auto;
+    max-width: 30vw;
+    max-height: 20vh;
+  }
+  .global-nav-sp, .global-nav-choiced-sp, .global-nav-img-sp {
     display: none;
   }
 }

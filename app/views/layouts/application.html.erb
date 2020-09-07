@@ -21,8 +21,8 @@
         <%= image_tag "other/sp_landscape.svg", alt: "sp-landscape" %>
     </div>
     <%= yield %>
-    <nav class="login-nav">
-        <% if !user_signed_in? %>
+    <% if !user_signed_in? %>
+        <nav class="login-nav">
         <%# <div class="login-nav"> %>
             <div class="btn">
                 <%= link_to 'ログイン', new_user_session_path, class: 'btnText' %>
@@ -31,21 +31,36 @@
                 <%= link_to '新規登録', new_user_registration_path, class: 'btnText' %>
             </div>
         <%# </div> %>
-        <% end %>
-    </nav>
+        </nav>
+    <% end %>
     <footer>
     <% if user_signed_in? %>
-        <div class="global-nav">
-            <%= link_to image_tag('nav/nav_new.svg', class: "global-nav-img top"), balloons_path %>
-            <%= link_to image_tag('nav/nav_show.svg', class: "global-nav-img show"), balloons_show_path %>
-            <%= link_to image_tag('nav/nav_bookmark.svg', class: "global-nav-img bookmark"), bookmarks_path %>
-            <%= link_to image_tag('nav/nav_setting.svg', class: "global-nav-img setting"), balloons_setting_path %>
+        <%# sp表示%>
+        <div class="global-nav-sp">
+            <%= link_to image_tag('nav/sp/nav_new.svg', class: "global-nav-img-sp top"), balloons_path %>
+            <%= link_to image_tag('nav/sp/nav_show.svg', class: "global-nav-img-sp show"), balloons_show_path %>
+            <%= link_to image_tag('nav/sp/nav_bookmark.svg', class: "global-nav-img-sp bookmark"), bookmarks_path %>
+            <%= link_to image_tag('nav/sp/nav_setting.svg', class: "global-nav-img-sp setting"), balloons_setting_path %>
         </div>
-        <div class="global-nav-choiced">
-            <%= link_to image_tag('nav/nav_new_choice.svg', class: "global-nav-img choice top-choiced"), balloons_path %>
-            <%= link_to image_tag('nav/nav_show_choice.svg', class: "global-nav-img choice show-choiced"), balloons_show_path %>
-            <%= link_to image_tag('nav/nav_bookmark_choice.svg', class: "global-nav-img choice bookmark-choiced"), bookmarks_path %>
-            <%= link_to image_tag('nav/nav_setting_choice.svg', class: "global-nav-img choice setting-choiced"), balloons_setting_path %>
+        <div class="global-nav-choiced-sp">
+            <%= link_to image_tag('nav/sp/nav_new_choice.svg', class: "global-nav-img-sp choice top-choiced"), balloons_path %>
+            <%= link_to image_tag('nav/sp/nav_show_choice.svg', class: "global-nav-img-sp choice show-choiced"), balloons_show_path %>
+            <%= link_to image_tag('nav/sp/nav_bookmark_choice.svg', class: "global-nav-img-sp choice bookmark-choiced"), bookmarks_path %>
+            <%= link_to image_tag('nav/sp/nav_setting_choice.svg', class: "global-nav-img-sp choice setting-choiced"), balloons_setting_path %>
+        </div>
+
+        <%# pc表示%>
+        <div class="global-nav-pc">
+            <%= link_to image_tag('nav/pc/nav_new.svg', class: "global-nav-img-pc top"), balloons_path %>
+            <%= link_to image_tag('nav/pc/nav_show.svg', class: "global-nav-img-pc show"), balloons_show_path %>
+            <%= link_to image_tag('nav/pc/nav_bookmark.svg', class: "global-nav-img-pc bookmark"), bookmarks_path %>
+            <%= link_to image_tag('nav/pc/nav_setting.svg', class: "global-nav-img-pc setting"), balloons_setting_path %>
+        </div>
+        <div class="global-nav-choiced-pc">
+            <%= link_to image_tag('nav/pc/nav_new_choice.svg', class: "global-nav-img-pc choice top-choiced"), balloons_path %>
+            <%= link_to image_tag('nav/pc/nav_show_choice.svg', class: "global-nav-img-pc choice show-choiced"), balloons_show_path %>
+            <%= link_to image_tag('nav/pc/nav_bookmark_choice.svg', class: "global-nav-img-pc choice bookmark-choiced"), bookmarks_path %>
+            <%= link_to image_tag('nav/pc/nav_setting_choice.svg', class: "global-nav-img-pc choice setting-choiced"), balloons_setting_path %>
         </div>
     <%end%>
   </footer>

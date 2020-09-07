@@ -1,4 +1,5 @@
-@import "common";
+@import "variables";
+// @import "common";
 
 .logomark-img-wrap {
   height: 50%;
@@ -45,6 +46,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   overflow: scroll;
   background-color: rgba(255, 255, 255, 0);
   margin: 0 auto;
@@ -118,24 +120,33 @@ p {
     height: 100vh;
   }
   p{
+    width: 70%;
     height: 68px;
     font-size: 30px;
+    margin: 0 0 0 auto;
+    line-height: 68px;
   }
   .paper-wrap{
-    width: 40%;
+    width: 70%;
     height: calc(100% - 68px);
-    margin: auto;
+    margin: 0 0 0 auto;
   }
   .paper-wrap-sub{
-    width: 90%;
+    width: 95%;
   }
   .paper{
-    $paper-width-tmb: 17vw;
-    width: $paper-width-tmb;
-    height: calc(#{$paper-width-tmb} * 1.41);
+    $paper-height-tmb: 40vh;
+    width: calc(#{$paper-height-tmb} / 1.41);
+    height: $paper-height-tmb;
+    margin: 1% 0;
   }
   .paper-img{
     width: 100%;
     height: auto;
+  }
+  .paper-btn{
+    $paper-height-tmb: 40vh;
+    width: calc(#{$paper-height-tmb} / 1.41);
+    height: $paper-height-tmb;
   }
 }

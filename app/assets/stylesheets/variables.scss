@@ -1,0 +1,11 @@
+$bg-blue: #50b4ff;
+$bg-white: #f0f0f0;
+$color-main: #ffa73f;
+$color-accent: #7095ff;
+$paper-width-tmb: 35vw;
+$paper-height-tmb: $paper-width-tmb * 1.41;
+// $root-fontSize: 24px;
+// 紙の画像の行間が52px,基準文字サイズを32px
+$paper-textSize: calc(32 * 100vw / 750);
+$paper-lineHeight: calc(52 * 100vw / 750);
+$paper-textHeight-content: calc(52 * 100vw / 750 * 11);
