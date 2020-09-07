@@ -1,6 +1,15 @@
 <%# scss読み込み %>
 <%= stylesheet_link_tag "devise/login", :media => "all" %>
+
+
 <div class="body-wrap">
+    <div class="logomark-img-wrap logo">
+        <%= image_tag "logo/logomark.svg", alt: "logomark" %>
+    </div>
+    <div class="logotype-img-wrap logo">
+        <%= image_tag "logo/logotype.svg", alt: "logotype" %>
+    </div>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="form-login">
@@ -14,18 +23,13 @@
                 <%= f.password_field :password, autocomplete: "current-password", class: "form formText", autocomplete: 'off' %>
             </div>
 
-            <% if devise_mapping.rememberable? %>
-                <div class="field formLabel formRemember">
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %>
-                </div>
-            <% end %>
-
             <div class="actions">
                 <%= f.submit "ログイン", class: "btn btnText" %>
             </div>
         </div>
     <% end %>
-
-    <%= render "devise/shared/links" %>
+    
+    <div class="links">
+        <%= render "devise/shared/links" %>
+    </div>
 </div>

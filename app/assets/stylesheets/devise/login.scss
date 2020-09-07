@@ -15,3 +15,88 @@
 .btn-regist {
   margin-top: 10%;
 }
+
+.logo{
+  display: none;
+}
+
+//メディアクエリ
+//tablet
+@media screen and (min-width: 481px) and (max-width: 960px) {
+  .body-wrap{
+    height: 100%;
+  }
+  .field{
+    margin: 0;
+  }
+}
+
+//pc & tab横向き
+@media screen and (min-width: 961px) and (orientation: landscape) {
+  .body-wrap{
+    height: 100%;
+  }
+  .logo{
+    display: block;
+  }
+  .logomark-img-wrap{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto 0 0;
+    padding: 5% 0;
+  }
+  .logomark-img-wrap img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .logotype-img-wrap{
+    position: relative;
+    width: 50%;
+    height: 30%;
+    margin: 0 0 0 auto;
+    top: -90%;
+  }
+  .logotype-img-wrap img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form-login, .form-regist{
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    margin: 0 0 0 auto;
+    top: 0;
+    left: 50%;
+    font-size: 20px;
+    line-height: 300%;
+    padding-top: 30vh;
+  }
+  .field{
+    margin: 0;
+  }
+  .formLabel{
+    padding-left: 10%;
+  }
+  .links{
+    position: absolute;
+    width: 50%;
+    height: 0;
+    margin: 0 0 0 auto;
+    top: 85%;
+    left: 50%;
+    font-size: 20px;
+    line-height: 0;
+  }
+  .links-regist{
+    top: 90%;
+  }
+  .link{
+    padding-bottom: 6%;
+  }
+  .btn-regist{
+    margin-top: 0;
+  }
+}

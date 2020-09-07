@@ -89,6 +89,7 @@ p {
     padding: 5% 0;
   }
   .logomark-img-wrap img{
+    width: 100%;
     margin: 0 auto;
   }
   .logotype-img-wrap{
@@ -112,5 +113,29 @@ p {
   }
   .btn{
     margin: 5% auto;
+  }
+  .body-wrap{
+    height: 100vh;
+  }
+  p{
+    height: 68px;
+    font-size: 30px;
+  }
+  .paper-wrap{
+    width: 40%;
+    height: calc(100% - 68px);
+    margin: auto;
+  }
+  .paper-wrap-sub{
+    width: 90%;
+  }
+  .paper{
+    $paper-width-tmb: 17vw;
+    width: $paper-width-tmb;
+    height: calc(#{$paper-width-tmb} * 1.41);
+  }
+  .paper-img{
+    width: 100%;
+    height: auto;
   }
 }
