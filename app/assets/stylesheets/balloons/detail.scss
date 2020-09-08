@@ -1,7 +1,9 @@
 @import "variables";
 
-.form-with{
-  height: 90%;
+
+.button_to{
+  position: relative;
+  top: 2%;
 }
 .btn{
   margin-bottom: 3%;
@@ -9,8 +11,7 @@
 }
 .body-wrap{
     position: relative;
-    height: 87%;
-    top: 3%;
+    height: 90%;
 }
 .body-wrap-sub {
   position: relative;
@@ -18,6 +19,7 @@
   height: calc(100% - 5vh);
   overflow: scroll;
   margin: 0 auto;
+  top: 2%;
 }
 .paper-img-wrap {
   position: absolute;
@@ -32,29 +34,26 @@
   height: 100%;
   margin: 0 5vw;
 }
-.form-title {
+.form{
   width: 100%;
-  height: $paper-lineHeight;
   background-color: transparent;
   margin: 0;
   margin-top: $paper-lineHeight;
+}
+.form-title {
+  height: $paper-lineHeight;
+  background-color: transparent;
 }
 .form-content {
-  width: 100%;
   height: $paper-textHeight-content;
-  background-color: transparent;
-  margin: 0;
-  margin-top: $paper-lineHeight;
 }
 .form-info {
-  width: 100%;
   height: $paper-lineHeight;
-  background-color: transparent;
-  margin: 0;
-}
-.form-info p{
-  font-size: calc(#{$paper-textSize} - 3px);
-  margin: 0;
+
+  p{
+    font-size: calc(#{$paper-textSize} - 3px);
+    margin: 0;
+  }
 }
 .signature{
   position: relative;
@@ -71,4 +70,74 @@
   padding: 0;
   border: 0;
   overflow: scroll;
+}
+
+//pc & tab横向き
+@media screen and (min-width: 961px) and (orientation: landscape) {
+  .btn{
+    width: calc(88vh / 1.41);
+  }
+  .body-wrap{
+    width: 70%;
+    height: 100%;
+    margin: 0 0 0 auto;
+    top: 0;
+  }
+  .body-wrap-sub{
+    width:  calc(88vh / 1.41);
+    height: 88%;
+  }
+  .paper-img-wrap{
+    width:  100%;
+    height: 100%;
+  }
+  .paper-img{
+    height: 100%;
+  }
+  .form-wrap {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    margin: 0;
+    left: 7.5%;
+  }
+  .form{
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    margin-top: $paper-lineHeight-pc;
+  }
+  .form-title {
+    height: $paper-lineHeight-pc;
+  }
+  .form-content {
+    height: $paper-textHeight-content-pc;
+  }
+  .form-info {
+    width: 100%;
+    height: $paper-lineHeight-pc;
+    background-color: transparent;
+    margin: 0;
+
+    p{
+      font-size: calc(#{$paper-textSize-pc} - 3px);
+      line-height: $paper-lineHeight-pc;
+      margin: 0;
+    }
+  }
+  .signature{
+    position: relative;
+    text-align: right;
+    top: calc(-1 * #{$paper-lineHeight-pc});
+  }
+  .paper{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: $paper-textSize-pc;
+    line-height: $paper-lineHeight-pc;
+    padding: 0;
+    border: 0;
+  }
 }
