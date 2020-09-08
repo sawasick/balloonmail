@@ -121,12 +121,18 @@ body {
 }
 
 //エラーメッセージ
+ul{
+  margin: 0;
+}
 .error-message{
-  position: relative;
+  position: absolute;
   list-style: none;
   color: red;
   font-weight: bold;
   margin: 0;
+  top: 10%;
+  left: 10vw;
+  z-index: 100;
 }
 .em-login{
   position: absolute;
@@ -188,8 +194,6 @@ body {
   }
   .global-nav-img-pc {
     display: inline-block;
-    // max-width: 30vw;
-    // max-height: 20vh;
     width: 100%;
     height: auto;
     max-width: 30vw;
@@ -197,5 +201,32 @@ body {
   }
   .global-nav-sp, .global-nav-choiced-sp, .global-nav-img-sp {
     display: none;
+  }
+
+  //ボタン
+  .btn{
+    height: 5vh;
+  }
+  .btnText{
+    line-height: 5vh;
+  }
+
+  //フォーム
+  .form{
+    height: 5vh;
+  }
+
+  //エラーメッセージ
+  .error-message{
+    display: block;
+    position: absolute;
+    width: calc(88vh / 1.41);
+    height: $paper-lineHeight-pc;
+    margin: 0 0 0 0;
+    font-size: $paper-textSize-pc;
+    margin-left: calc((70vw - (88vh / 1.41)) / 2);
+    left: 32vw;
+    line-height: $paper-lineHeight-pc;
+    top: calc(#{$paper-lineHeight-pc} * 2);
   }
 }

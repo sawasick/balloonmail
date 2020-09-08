@@ -4,8 +4,15 @@ $color-main: #ffa73f;
 $color-accent: #7095ff;
 $paper-width-tmb: 35vw;
 $paper-height-tmb: $paper-width-tmb * 1.41;
-// $root-fontSize: 24px;
-// 紙の画像の行間が52px,基準文字サイズを32px
+// 用紙サイズ→width:80vw
+// 用紙サイズ:600pxで下の数値になる
+// 紙の画像の行間が52px,基準文字サイズを32px(sp表示)
 $paper-textSize: calc(32 * 100vw / 750);
 $paper-lineHeight: calc(52 * 100vw / 750);
 $paper-textHeight-content: calc(52 * 100vw / 750 * 11);
+
+// 用紙サイズ→width:88vh / 1.41
+// spサイズを基準に(pc表示)
+$paper-textSize-pc: calc(32 * 88vh / 1.41 / 600);
+$paper-lineHeight-pc: calc((52 * 88vh) / 1.41 / 600);
+$paper-textHeight-content-pc: calc(52 * 88vh / 600 / 1.41 * 11);
